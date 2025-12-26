@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal portfolio showcasing projects, skills, and experience.">
+    <title>Chan Dany — Portfolio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-wrap">
+            <a class="brand" href="index.html">CHAN DANY</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+            <nav class="site-nav" id="siteNav" aria-label="Primary">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/skills.html">Skills</a></li>
+                    <li><a href="pages/experience.html">Experience</a></li>
+                    <li><a href="pages/projects.html">Projects</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-wrap">
+                <div class="hero-text">
+                    <h1>Hi, I'm <span>Dany</span></h1>
+                    <p class="subtitle">Frontend Developer • UI/UX Enthusiast • Problem Solver</p>
+                    <div class="cta">
+                        <a class="btn primary" href="pages/projects.html">View Projects</a>
+                        <a class="btn ghost" href="pages/contact.html">Contact Me</a>
+                        <a class="btn ghost" href="cv/Chan-Dany-Resume.pdf" download aria-label="Download Chan Dany CV">Download CV</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/Chan Dany.JPG" alt="Chan Dany profile photo">
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="grid cards">
+                    <article class="card">
+                        <div class="card-media" style="background-image: url('assets/images/features/inventory.jpg'); background-size: cover; background-position: center;" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Inventory Management System</h3>
+                            <p>Lightweight web app to track stock, suppliers, and orders with simple analytics.</p>
+                            <a class="btn small" href="pages/project-detail.html">Details</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" style="background-image: url('assets/images/features/news.jpg');" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>News Website</h3>
+                            <p>Responsive news site layout with categories, search, and article pages.</p>
+                            <a class="btn small" href="pages/project-detail.html">Details</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <div class="card-media" style="background-image: url('assets/images/features/portfolio.jpg');" aria-hidden="true"></div>
+                        <div class="card-body">
+                            <h3>Portfolio Website</h3>
+                            <p>Modern, accessible single-page portfolio template with reusable components.</p>
+                            <a class="btn small" href="pages/project-detail.html">Details</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section accent">
+            <div class="container">
+                <h2>What I Do</h2>
+                <div class="grid features">
+                    <div class="feature">
+                        <h3>Frontend Development</h3>
+                        <p>Building responsive, accessible interfaces with clean, maintainable code.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>UI/UX Design</h3>
+                        <p>Designing intuitive experiences focused on clarity and efficiency.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Problem Solving</h3>
+                        <p>Turning requirements into practical solutions and iterative improvements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <p>© <span id="year"></span> Chan Dany. All rights reserved.</p>
+            <div class="social">
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+</body>
+</html>

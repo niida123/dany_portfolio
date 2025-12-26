@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Project Details — CHAN DANY</title>
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/responsive.css">
+</head>
+<body>
+	<header class="site-header">
+		<div class="container header-wrap">
+			<a class="brand" href="../index.html">CHAN DANY</a>
+			<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+			<nav class="site-nav" id="siteNav" aria-label="Primary">
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="skills.html">Skills</a></li>
+					<li><a href="experience.html">Experience</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="section">
+			<div class="container">
+				<div class="project-detail">
+					<div class="detail-header">
+						<button class="back-btn" onclick="window.history.back()">← Back</button>
+						<div class="title-wrap">
+							<h1 id="projectTitle">Project Title</h1>
+							<p class="subtitle" id="projectSubtitle">Brief one-line summary of the project impact.</p>
+						</div>
+					</div>
+
+					<div class="meta-grid">
+						<div class="meta-item">
+							<span class="label">Timeline</span>
+							<span class="value" id="projectDate">Date</span>
+						</div>
+						<div class="meta-item">
+							<span class="label">Status</span>
+							<span class="value" id="projectStatus">Status</span>
+						</div>
+						<div class="meta-item">
+							<span class="label">Role</span>
+							<span class="value" id="projectRole">Developer</span>
+						</div>
+						<div class="meta-item">
+							<span class="label">Scope</span>
+							<span class="value" id="projectScope">Web App</span>
+						</div>
+					</div>
+
+					<div class="project-hero">
+						<img id="projectImage" src="../assets/images/projects/default.jpg" alt="Project preview" onerror="this.style.display='none';document.getElementById('heroFallback').style.display='block';">
+						<div id="heroFallback" class="hero-fallback" aria-hidden="true"></div>
+						<div class="hero-ctas">
+							<a href="#" class="btn primary" id="liveLink" target="_blank" rel="noopener">View Live</a>
+							<a href="#" class="btn ghost" id="githubLink" target="_blank" rel="noopener">GitHub</a>
+						</div>
+					</div>
+
+					<div class="detail-grid">
+						<div class="detail-main">
+							<section class="project-section">
+								<h2>Overview</h2>
+								<p id="projectOverview">Concise overview describing the problem, audience, and how the project delivers value.</p>
+							</section>
+
+							<section class="project-section">
+								<h2>Objective</h2>
+								<p id="projectObjective">Clear goals, constraints, and success criteria guiding the implementation.</p>
+							</section>
+
+							<section class="project-section">
+								<h2>Key Features</h2>
+								<ul id="projectFeatures" class="feature-list">
+									<li>Feature 1</li>
+									<li>Feature 2</li>
+									<li>Feature 3</li>
+								</ul>
+							</section>
+
+							<section class="project-section">
+								<h2>Challenges & Solutions</h2>
+								<p id="projectChallenges">Highlight notable technical or product challenges and how they were addressed.</p>
+							</section>
+
+							<section class="project-section">
+								<h2>Results</h2>
+								<p id="projectResults">Impact metrics, qualitative outcomes, and lessons learned.</p>
+							</section>
+
+							<section class="project-section">
+								<h2>Screenshots</h2>
+								<div class="project-screenshots" id="projectScreenshots">
+									<div class="shot skeleton"></div>
+									<div class="shot skeleton"></div>
+									<div class="shot skeleton"></div>
+								</div>
+							</section>
+						</div>
+
+						<aside class="detail-aside">
+							<section class="project-section boxed">
+								<h3>Tech Stack</h3>
+								<div class="tech-stack" id="projectTech">
+									<span class="tech-tag">Technology 1</span>
+									<span class="tech-tag">Technology 2</span>
+									<span class="tech-tag">Technology 3</span>
+								</div>
+							</section>
+							<section class="project-section boxed">
+								<h3>Responsibilities</h3>
+								<ul class="responsibilities" id="projectResponsibilities">
+									<li>Architecture & data modeling</li>
+									<li>UI implementation</li>
+									<li>Testing & deployment</li>
+								</ul>
+							</section>
+						</aside>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<div class="container footer-wrap">
+			<p>© <span id="year"></span> Chan Dany. All rights reserved.</p>
+			<div class="social">
+				<a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+				<a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">GitHub</a>
+				<a href="https://twitter.com/your-profile" target="_blank" rel="noopener noreferrer">Twitter</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="../assets/js/main.js"></script>
+	<script>
+		// Example: Load project data from URL parameter
+		const projectId = new URLSearchParams(window.location.search).get('id');
+		
+		// Sample project data - replace with your actual data or fetch from API
+		const projects = {
+			'inventory-management-system': {
+				title: 'Inventory Management System',
+				date: '2023',
+				status: 'Completed',
+				role: 'Full-stack Developer',
+				scope: 'Business Web App',
+				overview: 'A comprehensive inventory management system built with Laravel that helps businesses track products, manage stock levels, and generate reports.',
+				objective: 'To develop a scalable inventory management solution that streamlines product tracking and reduces manual data entry.',
+				features: [
+					'Real-time inventory tracking',
+					'Automated stock alerts',
+					'Comprehensive reporting dashboard',
+					'User role management',
+					'Product category organization'
+				],
+				technologies: ['Laravel', 'MySQL', 'Bootstrap', 'PHP'],
+				challenges: 'The main challenge was handling complex database relationships and ensuring data consistency across multiple transactions.',
+				results: 'Successfully deployed the system resulting in 40% reduction in manual inventory checks and improved accuracy.',
+				live: '#',
+				github: '#',
+				image: '../assets/images/projects/default.jpg'
+			},
+			'news-website': {
+				title: 'News Website',
+				date: '2023',
+				status: 'Completed',
+				role: 'Frontend Developer',
+				scope: 'Content Platform',
+				overview: 'A modern news website platform featuring article management, user comments, and category-based content organization.',
+				objective: 'To create an engaging news platform with efficient content management capabilities.',
+				features: [
+					'Article publishing system',
+					'Category-based organization',
+					'User comment system',
+					'Search functionality',
+					'Responsive design'
+				],
+				technologies: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'MongoDB'],
+				challenges: 'Implementing a smooth and responsive user experience while maintaining fast page load times.',
+				results: 'The platform successfully handles thousands of daily users with optimized performance metrics.',
+				live: '#',
+				github: '#',
+				image: '../assets/images/projects/default.jpg'
+			}
+		};
+
+		// Load project data
+		if (projectId && projects[projectId]) {
+			const project = projects[projectId];
+			document.getElementById('projectTitle').textContent = project.title;
+			document.getElementById('projectDate').textContent = project.date;
+			document.getElementById('projectStatus').textContent = project.status;
+			document.getElementById('projectOverview').textContent = project.overview;
+			document.getElementById('projectObjective').textContent = project.objective;
+			document.getElementById('projectRole').textContent = project.role || 'Developer';
+			document.getElementById('projectScope').textContent = project.scope || 'Project';
+
+			const featuresHTML = project.features.map(f => `<li>${f}</li>`).join('');
+			document.getElementById('projectFeatures').innerHTML = featuresHTML;
+
+			const techHTML = project.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('');
+			document.getElementById('projectTech').innerHTML = techHTML;
+
+			document.getElementById('projectChallenges').textContent = project.challenges;
+			document.getElementById('projectResults').textContent = project.results;
+
+			// Links
+			const liveLink = document.getElementById('liveLink');
+			const githubLink = document.getElementById('githubLink');
+			if (project.live && project.live !== '#') { liveLink.href = project.live; } else { liveLink.classList.add('disabled'); }
+			if (project.github && project.github !== '#') { githubLink.href = project.github; } else { githubLink.classList.add('disabled'); }
+
+			// Hero image
+			const heroImg = document.getElementById('projectImage');
+			if (project.image) heroImg.src = project.image;
+
+			// Update page title
+			document.title = project.title + ' — Chan Dany';
+		}
+
+		// Set current year in footer
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+</body>
+</html>
