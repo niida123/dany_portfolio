@@ -172,8 +172,8 @@ body {
 
 /* Project Detail */
 .project-detail { display: grid; gap: 28px; }
-.detail-header { display: flex; align-items: start; justify-content: space-between; gap: 16px; }
-.back-btn { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; }
+.detail-header { display: flex; align-items: start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.back-btn { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; flex-shrink: 0; }
 .back-btn:hover { border-color: var(--primary); }
 .title-wrap h1 { margin: 0 0 6px; font-size: 30px; }
 .title-wrap .subtitle { margin: 0; color: var(--muted); }
