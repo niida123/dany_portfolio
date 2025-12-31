@@ -142,8 +142,9 @@
 
 	<script src="../assets/js/main.js"></script>
 	<script>
-		// Example: Load project data from URL parameter
+		// Load project data from URL parameter; default to inventory project for direct opens
 		const projectId = new URLSearchParams(window.location.search).get('id');
+		const fallbackProjectId = 'inventory-management-system';
 		
 		// Sample project data - replace with your actual data or fetch from API
 		const projects = {
@@ -200,9 +201,11 @@
 			}
 		};
 
-		// Load project data
-		if (projectId && projects[projectId]) {
-			const project = projects[projectId];
+		// Load project data (fallback when no id is provided, e.g., when opened directly from a link)
+		const resolvedProjectId = (projectId && projects[projectId]) ? projectId : fallbackProjectId;
+		const project = projects[resolvedProjectId];
+
+		if (project) {
 			document.getElementById('projectTitle').textContent = project.title;
 			document.getElementById('projectDate').textContent = project.date;
 			document.getElementById('projectStatus').textContent = project.status;
