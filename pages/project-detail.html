@@ -236,9 +236,11 @@
 			// Load screenshots
 			const screenshotsContainer = document.getElementById('projectScreenshots');
 			if (project.screenshots && project.screenshots.length > 0) {
-				const screenshotsHTML = project.screenshots.map(src => 
-					`<img src="${src}" alt="${project.title} screenshot" loading="lazy">`
-				).join('');
+				// Normalize each path relative to this page so it works on GitHub Pages and mobile
+				const screenshotsHTML = project.screenshots.map(src => {
+					const resolved = new URL(src, document.baseURI).href;
+					return `<img src="${resolved}" alt="${project.title} screenshot" loading="lazy">`;
+				}).join('');
 				screenshotsContainer.innerHTML = screenshotsHTML;
 			} else {
 				screenshotsContainer.innerHTML = '<p class="text-muted">No screenshots available yet.</p>';
