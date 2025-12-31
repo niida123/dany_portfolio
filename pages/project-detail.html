@@ -99,9 +99,8 @@
 							<section class="project-section">
 								<h2>Screenshots</h2>
 								<div class="project-screenshots" id="projectScreenshots">
-									<div class="shot skeleton"></div>
-									<div class="shot skeleton"></div>
-									<div class="shot skeleton"></div>
+									<!-- Screenshots will be loaded dynamically -->
+
 								</div>
 							</section>
 						</div>
@@ -168,7 +167,13 @@
 				results: 'Successfully deployed the system resulting in 40% reduction in manual inventory checks and improved accuracy.',
 				live: '#',
 				github: '#',
-				image: '../assets/images/projects/default.jpg'
+				image: '../assets/images/projects/default.jpg',
+				screenshots: [
+					'../projects/inventory-management-system/screenshots/login.png',
+					'../projects/inventory-management-system/screenshots/mainform.png',
+					'../projects/inventory-management-system/screenshots/odermodule.png',
+					'../projects/inventory-management-system/screenshots/orderdetail.png'
+				]
 			},
 			'news-website': {
 				title: 'News Website',
@@ -190,7 +195,8 @@
 				results: 'The platform successfully handles thousands of daily users with optimized performance metrics.',
 				live: '#',
 				github: '#',
-				image: '../assets/images/projects/default.jpg'
+				image: '../assets/images/projects/default.jpg',
+				screenshots: []
 			}
 		};
 
@@ -223,6 +229,17 @@
 			// Hero image
 			const heroImg = document.getElementById('projectImage');
 			if (project.image) heroImg.src = project.image;
+
+			// Load screenshots
+			const screenshotsContainer = document.getElementById('projectScreenshots');
+			if (project.screenshots && project.screenshots.length > 0) {
+				const screenshotsHTML = project.screenshots.map(src => 
+					`<img src="${src}" alt="${project.title} screenshot" loading="lazy">`
+				).join('');
+				screenshotsContainer.innerHTML = screenshotsHTML;
+			} else {
+				screenshotsContainer.innerHTML = '<p class="text-muted">No screenshots available yet.</p>';
+			}
 
 			// Update page title
 			document.title = project.title + ' — Chan Dany';
