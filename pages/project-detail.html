@@ -151,10 +151,11 @@
 		const projects = {
 			'lecturer-management-system': {
 				title: 'Lecturer Management System',
+				subtitle: 'Manage lecturer profiles: personal details, department, courses taught, and active/inactive status.',
 				date: '2025',
-				status: 'Completed',
-				role: 'Full Stack Developer',
-				scope: 'Desktop Application',
+				status: 'In Progress 50%',
+				role: 'Back End Developer',
+				scope: 'Web Application',
 				overview: 'A comprehensive desktop application for managing lecturer information including personal details, department assignments, courses taught, and active/inactive status tracking.',
 				objective: 'To create an efficient system for educational institutions to manage lecturer profiles, track their teaching assignments, and maintain updated records.',
 				features: [
@@ -165,13 +166,25 @@
 					'Course history tracking',
 					'Search and filter functionality'
 				],
-				technologies: ['C# Windows Forms', '.NET Framework', 'SQL Server'],
+				technologies: ['Laravel', 'PHP', 'MySQL', 'HTML', 'CSS','Bootstrap'],
+				responsibilities: [
+					'Designed MySQL database schema for lecturers, departments, and courses',
+					'Developed backend logic using Laravel for CRUD operations',
+					'Implemented user authentication and role-based access control',
+					'Created responsive frontend UI with Bootstrap',
+					'Integrated search and filter functionality for easy data retrieval'
+				],
 				challenges: 'Managing complex relationships between lecturers, departments, and courses while ensuring data integrity and providing an intuitive user interface.',
 				results: 'Successfully developed a functional system that streamlines lecturer management and improves administrative efficiency.',
 				live: '#',
 				// github: '#',
-				image: '../assets/images/features/inventory.jpg',
-				screenshots: []
+				image: '../assets/images/features/lecturer.jpg',
+				screenshots: [
+					'../projects/lecturer-management-system/screenshots/login.png',
+					'../projects/lecturer-management-system/screenshots/dashboard.png',
+					'../projects/lecturer-management-system/screenshots/lecturermodule.png',
+					'../projects/lecturer-management-system/screenshots/lecturerdetail.png'
+				]
 			},
 			'e-commerce-website': {
 				title: 'E-Commerce Website',
@@ -190,6 +203,13 @@
 					'Order history and tracking'
 				],
 				technologies: ['HTML', 'CSS', 'JavaScript','Bootstrap', 'Laravel', 'MySQL'],
+				responsibilities: [
+					'Designed MySQL database schema for products, users, orders, and cart management',
+					'Developed responsive storefront UI using Bootstrap and Laravel Blade templates',
+					'Built shopping cart with session management and promo code validation',
+					'Implemented secure checkout flow with order confirmation emails',
+					'Created admin dashboard for product, inventory, and order management'
+				],
 				challenges: 'Ensuring responsive design across devices and optimizing load times for a better user experience.',
 				results: 'The platform successfully supports hundreds of daily users with high conversion rates and positive feedback.',
 				live: '#',
@@ -224,6 +244,13 @@
 				],
 				technologies: ['C# Windows Forms', '.NET Framework', 'SQL Server'],
 				challenges: 'The main challenge was handling complex database relationships and ensuring data consistency across multiple transactions.',
+				responsibilities: [
+					'Designed and implemented SQL Server database schema for products, customers, and orders',
+					'Developed Windows Forms UI for intuitive user interactions',
+					'Implemented business logic for stock calculations and order processing',
+					'Ensured data integrity through proper error handling and validation',
+					'Conducted testing and debugging to ensure system reliability'
+				],
 				results: 'Successfully developed a functional inventory management desktop application that streamlines inventory tracking and order processing, leading to improved accuracy and efficiency for users.',
 				live: 'https://youtu.be/J09FLgQvsYU?si=-HmadrOsykODUW6n',
 				// github: '#',
@@ -237,29 +264,44 @@
 			},
 			'news-website': {
 				title: 'News Website',
+				subtitle: 'A modern news platform with article and category management.',
 				date: '2023',
 				status: 'Completed',
-				role: 'Frontend Developer',
+				role: 'Full Stack Developer',
 				scope: 'Content Platform',
-				overview: 'A modern news website platform featuring article management, user comments, and category-based content organization.',
+				overview: 'A modern news website platform featuring article management, and category-based content organization.',
 				objective: 'To create an engaging news platform with efficient content management capabilities.',
 				features: [
 					'Article publishing system',
 					'Category-based organization',
-					'User comment system',
-					'Search functionality',
+					'Admin dashboard for content management',
 					'Responsive design'
 				],
-				technologies: ['HTML5', 'CSS3', 'JavaScript', 'Node.js', 'MongoDB'],
+				technologies: ['PHP', 'HTML', 'CSS','Bootstrap', 'JavaScript', 'MySQL'],
+				responsibilities: [
+					'Designed MySQL database schema for articles, categories, and users',
+					'Built responsive UI with gradient navbar, hero carousel, and card-based article grids',
+					'Implemented CRUD operations for articles with image upload and category management',
+					'Created admin dashboard for managing content',
+					'Developed search and filter functionality for articles by category and keywords'
+				],
 				challenges: 'Implementing a smooth and responsive user experience while maintaining fast page load times.',
 				results: 'The platform successfully handles thousands of daily users with optimized performance metrics.',
 				live: '#',
 				// github: '#',
 				image: '../assets/images/projects/news.png',
-				screenshots: []
+				screenshots: [
+					'../projects/news-website/screenshots/login.png',
+					'../projects/news-website/screenshots/home.png',
+					'../projects/news-website/screenshots/category.png',
+					'../projects/news-website/screenshots/article.png',
+					'../projects/news-website/screenshots/admin_dashboard.png',
+					'../projects/news-website/screenshots/create_article.png'
+				]
 			},
 			'portfolio-website': {
 				title: 'Portfolio Website',
+				subtitle: 'A modern, accessible portfolio template with clean design, smooth navigation, and optimized performance for showcasing projects and skills.',
 				date: '2025',
 				status: 'Completed',
 				role: 'Frontend Developer',
@@ -274,13 +316,27 @@
 					'Contact form with validation',
 					'Optimized performance and accessibility'
 				],
-				technologies: ['HTML5', 'CSS3', 'JavaScript', 'Responsive Design'],
+				technologies: ['HTML', 'CSS', 'JavaScript', 'Responsive Design'],
+				responsibilities: [
+					'Designed and implemented responsive UI using HTML5, CSS3, and JavaScript',
+					'Created reusable components for project showcases and skill tags',
+					'Developed smooth scrolling and navigation features',
+					'Implemented contact form with client-side validation',
+					'Optimized website performance for fast load times and accessibility compliance'
+				],
 				challenges: 'Balancing aesthetic design with performance optimization while maintaining accessibility standards.',
 				results: 'Successfully created a professional portfolio that effectively showcases projects and skills with excellent performance metrics.',
 				live: '#',
 				// github: '#',
 				image: '../assets/images/projects/portfolio.png',
-				screenshots: []
+				screenshots: [
+					'../projects/portfolio-website/screenshots/home.png',
+					'../projects/portfolio-website/screenshots/about.png',
+					'../projects/portfolio-website/screenshots/skills.png',
+					'../projects/portfolio-website/screenshots/experience.png',
+					'../projects/portfolio-website/screenshots/projects.png',
+					'../projects/portfolio-website/screenshots/contact.png'
+				]
 			}
 		};
 
@@ -303,6 +359,9 @@
 
 			const techHTML = project.technologies.map(t => `<span class="tech-tag">${t}</span>`).join('');
 			document.getElementById('projectTech').innerHTML = techHTML;
+
+			const responsibilitiesHTML = project.responsibilities ? project.responsibilities.map(r => `<li>${r}</li>`).join('') : '<li>N/A</li>';
+			document.getElementById('projectResponsibilities').innerHTML = responsibilitiesHTML;
 
 			document.getElementById('projectChallenges').textContent = project.challenges;
 			document.getElementById('projectResults').textContent = project.results;
